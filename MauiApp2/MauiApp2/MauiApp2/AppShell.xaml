@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Anasayfa"
+    BackgroundColor="#f0f0f0"
+    Shell.ForegroundColor="Black"
+    Shell.TitleColor="#007aff"
+    Shell.DisabledColor="Gray"
+    Shell.UnselectedColor="Gray"
+    Shell.TabBarBackgroundColor="White"
+    Shell.TabBarForegroundColor="#007aff"
+    
+    Shell.TabBarUnselectedColor="Gray">
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Ana Sayfa"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" 
+            />
+        <ShellContent
+            Title="Kurlar"
+            ContentTemplate="{DataTemplate local:Kurlar}"
+            Route="Kurlar"
+            />
+        <ShellContent
+            Title="Haberler"
+            ContentTemplate="{DataTemplate local:Haberler}"
+            Route="Haberler"
+            />
+        <ShellContent
+            Title="Hava Durumu"
+            ContentTemplate="{DataTemplate local:HavaDurumu}"
+            Route="HavaDurumu"
+            />
+        <ShellContent
+            Title="Yapılacaklar"
+            ContentTemplate="{DataTemplate local:ToDoList}"
+            Route="ToDoList"
+            />
+        <ShellContent
+            Title="Ayarlar"
+            ContentTemplate="{DataTemplate local:Ayarlar}"
+            Route="Ayarlar"
+            />
+    </FlyoutItem>
+</Shell>

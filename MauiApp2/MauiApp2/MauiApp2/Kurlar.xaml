@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp2"
+             x:Class="MauiApp2.Kurlar"
+             Title="Kurlar"
+             BackgroundColor="#f0f0f0">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+        <!-- Header Row -->
+        <Grid Grid.Row="0" Margin="20" BackgroundColor="#ffffff" Padding="10" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="Adı" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="#333333"/>
+            <Label Grid.Column="1" Text="Alış" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="#333333"/>
+            <Label Grid.Column="2" Text="Satış" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="#333333"/>
+            <Label Grid.Column="3" Text="Fark" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="#333333"/>
+            <Label Grid.Column="4" Text="Yön" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="#333333"/>
+        </Grid>
+
+        <!-- CollectionView Row -->
+        <CollectionView Grid.Row="1" Margin="20" x:Name="DovizListe" BackgroundColor="#ffffff"  >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,10" Padding="10" CornerRadius="10" BackgroundColor="#f9f9f9" HasShadow="True">
+                        <Grid ColumnDefinitions="*,*,*,*,*" Padding="5">
+                            <Label Grid.Column="0" Text="{Binding Dname}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="#666666"/>
+                            <Label Grid.Column="1" Text="{Binding Alış}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="#666666"/>
+                            <Label Grid.Column="2" Text="{Binding Satış}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="#666666"/>
+                            <Label Grid.Column="3" Text="{Binding Değişim}" HorizontalTextAlignment="Center" FontSize="Small" TextColor="#666666"/>
+                            <Image Grid.Column="4" Source="{Binding Yon}" HeightRequest="20" HorizontalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Update Button Row -->
+        <Button Grid.Row="2" Text="Güncelle" Margin="20" Clicked="Button_Clicked" TextColor="White" BackgroundColor="#007aff" CornerRadius="10"/>
+    </Grid>
+</ContentPage>

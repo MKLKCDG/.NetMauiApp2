@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage"
+             Title="Ödev"
+             BackgroundColor="#f0f0f0">
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="20" Padding="20">
+        <Frame Padding="20" CornerRadius="15" BackgroundColor="White" HasShadow="True">
+            <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Label Text="ÖDEV-2" 
+                       FontSize="30" 
+                       HorizontalOptions="Center" 
+                       TextColor="#007aff" 
+                       FontAttributes="Bold"/>
+
+                <Image Source="pp.png" 
+                       WidthRequest="150" 
+                       HeightRequest="150"
+                       HorizontalOptions="Center"
+                       Aspect="AspectFill"
+                       />
+
+                <Label Text="Mikail KOCADAĞ" 
+                       FontSize="24" 
+                       HorizontalOptions="Center" 
+                       TextColor="#333"
+                       FontAttributes="Bold"/>
+
+                <Label Text="20010310036" 
+                       FontSize="24" 
+                       HorizontalOptions="Center" 
+                       TextColor="#333"/>
+
+                <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği Bölümü" 
+                       FontSize="18" 
+                       HorizontalOptions="Center" 
+                       TextColor="#333"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
